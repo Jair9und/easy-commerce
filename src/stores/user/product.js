@@ -22,4 +22,9 @@ export const useProductStore = defineStore("product", {
     ],
     loaded: false,
   }),
+  actions:{
+    filterProducts(searchText){
+      return this.list.filter(product => product.name.toLowerCase().includes(searchText.toLowerCase()))
+    }
+  }
 });

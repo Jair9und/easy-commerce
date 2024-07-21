@@ -26,8 +26,8 @@ const handleSearch = (event) => {
   if(event.key === 'Enter'){
     router.push({
       name: 'search',
-      params: {
-        query: searchText.value
+      query: {
+        q: searchText.value
       }
     })
   }
