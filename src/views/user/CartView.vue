@@ -5,6 +5,11 @@ import { useCartStore } from '@/stores/user/cart';
 
 const cartStore = useCartStore();
 
+const changeQuantity = (event, index) => {
+    const newQuantity = parseInt(event.target.value);
+    cartStore.updateQuantitiy(index, newQuantity)
+}
+
 </script>
 
 <template>
@@ -31,7 +36,7 @@ const cartStore = useCartStore();
                                         <div>{{item.price}} B</div>
                                     </div>
                                     <div>
-                                        <select v-model="item.quantity" class="p-4 w-1/2">
+                                        <select class="p-4 w-1/2" @change="changeQuantity($event, index)">
                                             <option v-for="quantity in [1,2,3,4]">
                                                 {{ quantity }}
                                             </option>
