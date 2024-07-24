@@ -6,7 +6,7 @@ export const useProductStore = defineStore("product", {
       {
         name: "test",
         imageUrl: "https://fastly.picsum.photos/id/849/200/200.jpg?hmac=LwsdGn2endKvoLY10FPqtfqKYCVMbPEp5J6S_tUN1Yg",
-        quantity: 10,
+        quantity: 1,
         about: "testt",
         status: "open",
         price: 100,
@@ -14,7 +14,7 @@ export const useProductStore = defineStore("product", {
       {
         name: "test123",
         imageUrl: "https://fastly.picsum.photos/id/849/200/200.jpg?hmac=LwsdGn2endKvoLY10FPqtfqKYCVMbPEp5J6S_tUN1Yg",
-        quantity: 10,
+        quantity: 1,
         about: "Recheck for detail",
         status: "open",
         price: 100,

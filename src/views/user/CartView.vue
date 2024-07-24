@@ -24,7 +24,7 @@ const changeQuantity = (event, index) => {
                 </div>
                 <div class="flex" v-for="(item,index) in cartStore.items">
                     <div class="flex-1">
-                        <img class="w-full p-10" src="https://picsum.photos/200/200">
+                        <img class="w-full p-10" :src="item.imageUrl">
                     </div>
                     <div class="flex-1">
                         <div class="flex flex-col justify-between h-full">
@@ -36,7 +36,7 @@ const changeQuantity = (event, index) => {
                                         <div>{{item.price}} B</div>
                                     </div>
                                     <div>
-                                        <select class="p-4 w-1/2" @change="changeQuantity($event, index)">
+                                        <select v-model="item.quantity" class="p-4 w-1/2" @change="changeQuantity($event, index)">
                                             <option v-for="quantity in [1,2,3,4]">
                                                 {{ quantity }}
                                             </option>
