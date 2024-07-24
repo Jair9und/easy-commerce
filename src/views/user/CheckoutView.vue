@@ -52,7 +52,7 @@ const payment = () => {
                 </div>
                 <button @click="payment" class="btn btn-neutral w-full mt-4">ชำระเงิน</button>
             </section>
-            <section class="flex-auto w-32 bg-slate-200">
+            <section class="flex-auto w-32 bg-slate-200 px-2">
                 <div v-for="item in cartStore.items" class="flex bg-white m-8 py-4">
                     <div class="flex-1">
                         <img class="w-full p-8" :src="item.imageUrl">
@@ -67,6 +67,23 @@ const payment = () => {
                         </div>
                     </div>
                 </div>
+                <div class="divider"></div>
+                <div class="p-4">
+                    <div><b>Order Summary</b></div>
+                    <div class="flex justify-between">
+                        <div>ราคาสินค้าทั้งหมด</div>
+                        <div>{{ cartStore.summaryPrice }}</div>
+                    </div>
+                    <div class="flex justify-between">
+                        <div>ค่าส่ง</div>
+                        <div>0</div>
+                    </div>
+                </div>
+                <div class="divider"></div>
+                <div class="flex justify-between p-4 mb-4">
+                        <div>ราคาทั้งหมด</div>
+                        <div>{{ cartStore.summaryPrice }}</div>
+                    </div>
             </section>
         </div>
     </UserLayout>
