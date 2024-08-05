@@ -36,7 +36,7 @@ onMounted(() => {
 <template>
   <div class="drawer drawer-open">
     <input id="my-drawer-2" type="checkbox" class="drawer-toggle" />
-    <div class="drawer-content">
+    <div class="drawer-content mx-4">
       <slot></slot>
     </div>
     <div class="drawer-side">
